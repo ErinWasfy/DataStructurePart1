@@ -1,0 +1,27 @@
+  public static Node findIntersection(Node list1,Node list2 )
+    {
+        Set<Node> mergeLists=new HashSet<>();
+        Node newNode=new Node(0);
+        Node dummyNode=newNode;
+        if(list1==null)
+            return list1;
+        if(list2==null)return list2;
+        while (list1!=null || list2!=null)
+        {
+            if(mergeLists.contains(list1)) return newNode.next;
+            else {
+                mergeLists.add(list1);
+                newNode.next=list1;
+                newNode=list1;
+            }
+            if(mergeLists.contains(list2)) return newNode.next;
+            else {
+                mergeLists.add(list2);
+                newNode.next=list2;
+                newNode=list2;
+            }
+            list1=list1.next;
+            list2=list2.next;
+        }
+        return null;
+    }
