@@ -1,0 +1,10 @@
+ public static int countOddEvenNums(int[] a){
+       int countOdd=0,countEven=0;
+       for(int i=0;i<a.length;i++)
+       {
+           if(a[i]%2==0)countEven+=a[i];
+           else
+               countOdd+=a[i];
+       }
+       return countOdd-countEven;
+    }
