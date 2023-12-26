@@ -1,0 +1,11 @@
+public static char[] listOfCharsFromIndexPoint(char[] a, int start, int len)
+    {
+        char[] chars=new char[len];
+    if(start>a.length || len>a.length || len==a.length-start+1 || len==0 || a.length==0)return null;
+     for(int i=start,x=0;i<a.length&&x<len;i++)
+     {
+         chars[x] = a[i];
+         x++;
+     }
+     return chars;
+    }
