@@ -1,0 +1,10 @@
+  public static int reverseNum(int num)
+    {
+        int remin=0;
+        while (num>0)
+        {
+            remin=num%10+remin*10;
+            num/=10;
+        }
+        return remin;
+    }
